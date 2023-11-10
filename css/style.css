@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 140px;
+}
+#sub {
+  width: 40px;
+}
+#accent {
+  width: 20px;
+}
+#box {
+  padding: 1em;
+  margin: 3px;
+  border-radius: 5px;
+  width: 205px;
+  & #title {
+    text-align: center;
+    background-color: #fff;
+  }
+}

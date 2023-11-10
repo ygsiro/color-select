@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="construct">
+    <title>配色</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body onload="inputColor(main.value, sub.value, accent.value)">
+    <form oninput="inputColor(main.value, sub.value, accent.value)">
+        <input type="color" name="main" id="main" value="#968892">
+        <input type="color" name="sub" id="sub" value="#55353C">
+        <input type="color" name="accent" id="accent" value="#ECDFE6">
+    </form>
+    <div id="box">
+        <h2 id="title">Title</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eveniet possimus nam esse!
+        </p>
+        <p id="css"></p>
+        <p>Dolorum ea porro,
+            recusandae iste eius culpa modi quae magnam quo, repellat quas fugit quidem. Sunt, atque.</p>
+    </div>
+</body>
+
+</html>

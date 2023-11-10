@@ -5,22 +5,21 @@
   box-sizing: border-box;
 }
 
-#main {
-  width: 140px;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
-#sub {
-  width: 40px;
-}
-#accent {
-  width: 20px;
-}
-#box {
-  padding: 1em;
-  margin: 3px;
-  border-radius: 5px;
-  width: 205px;
-  & #title {
-    text-align: center;
-    background-color: #fff;
-  }
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }

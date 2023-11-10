@@ -1,11 +1,9 @@
 "use strict"
 
-const inputColor = (main, sub, acc) => {
-    const box = document.getElementById("box");
-    const title = document.getElementById("title");
-    box.style.backgroundColor = main;
-    box.style.color = acc;
-    title.style.backgroundColor = sub;
-    const css = document.getElementById("css");
-    css.innerText = `main: ${main}\nsub: ${sub}\nacc: ${acc}`;
+const changeInput = (main, sub, acc, text) => {
+    document.getElementById("main-color").style.fill = main;
+    document.getElementById("sub-color").style.fill = sub;
+    document.getElementById("accent-color").style.fill = acc;
+    document.getElementById("under-line").style.stroke = acc;
+    document.getElementById("text-color").style.fill = text;
 };

@@ -10,20 +10,23 @@
     <script src="js/script.js" defer></script>
 </head>
 
-<body onload="inputColor(main.value, sub.value, accent.value)">
-    <form oninput="inputColor(main.value, sub.value, accent.value)">
-        <input type="color" name="main" id="main" value="#968892">
-        <input type="color" name="sub" id="sub" value="#55353C">
-        <input type="color" name="accent" id="accent" value="#ECDFE6">
+<body>
+    <form oninput="changeInput(main.value, sub.value, accent.value, text.value)">
+        <input type="color" name="main" id="main" value="#333333">
+        <input type="color" name="sub" id="sub" value="#777777">
+        <input type="color" name="accent" id="accent" value="#ffac66">
+        <input type="color" name="text" id="text" value="#ff7878">
     </form>
-    <div id="box">
-        <h2 id="title">Title</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eveniet possimus nam esse!
-        </p>
-        <p id="css"></p>
-        <p>Dolorum ea porro,
-            recusandae iste eius culpa modi quae magnam quo, repellat quas fugit quidem. Sunt, atque.</p>
-    </div>
+    <svg id="canvas" width="300px" height="300px">
+        <path d="M0,0H300V300H0Z" fill="#333333" id="main-color" />
+        <path d="M0,200L300,220V300H0Z" fill="#777777" id="sub-color" />
+        <circle cx="50" cy="50" r="30" fill="#ffac66" id="accent-color" />
+        <text font-family="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" font-weight="bold"
+            font-size="30px">
+            <tspan x="75" y="110" fill="#ff7878" id="text-color">Color Palette</tspan>
+        </text>
+        <path d="M75,115H282" id="under-line" stroke="#ffac66" stroke-width="3" />
+    </svg>
 </body>
 
 </html>

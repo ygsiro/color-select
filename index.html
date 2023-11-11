@@ -11,25 +11,45 @@
 </head>
 
 <body>
-    <form oninput="changeInput(main.value, sub.value, accent.value, text.value)">
-        <input type="color" name="main" id="main" value="#333333">
-        <input type="color" name="sub" id="sub" value="#777777">
-        <input type="color" name="accent" id="accent" value="#ffac66">
-        <input type="color" name="text" id="text" value="#ff7878">
-    </form>
-    <svg id="canvas" width="300px" height="300px">
-        <path d="M0,0H300V300H0Z" fill="#333333" id="main-color" />
-        <path d="M0,200L300,220V300H0Z" fill="#777777" id="sub-color" />
-        <circle cx="50" cy="50" r="30" fill="#ffac66" id="accent-color" />
-        <text font-family="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" font-weight="bold"
-            font-size="30px">
-            <tspan x="75" y="110" fill="#ff7878" id="text-color">Color Palette</tspan>
-        </text>
-        <path d="M75,115H282" id="under-line" stroke="#ffac66" stroke-width="3" />
+    <svg id="canvas" viewBox="-110 -110 220 220" width="150px" height="150px">
+        <defs>
+            <path d="M-25.8819-96.5926A100,100 30 0 1 25.8819,-96.5926L0,0Z" id="flagment" />
+        </defs>
+        <g stroke="#fff" stroke-width="5">
+            <use href="#flagment" transform="rotate(0)" fill="hsl(0, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(30)" fill="hsl(30, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(60)" fill="hsl(60, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(90)" fill="hsl(90, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(120)" fill="hsl(120, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(150)" fill="hsl(150, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(180)" fill="hsl(180, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(210)" fill="hsl(210, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(240)" fill="hsl(240, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(270)" fill="hsl(270, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(300)" fill="hsl(300, 100%, 50%)" />
+            <use href="#flagment" transform="rotate(330)" fill="hsl(330, 100%, 50%)" />
+        </g>
+        <circle r="70" fill="#fff" />
+        <circle r="65" fill="#f00" id="main-color" />
+        <circle r="10" cy="-83" fill="#fff" stroke="#000" stroke-width="5" id="cursor" />
     </svg>
-    <div id="comple">
-        <p>補色</p>
-    </div>
+    <form oninput="changeColor(hue.value, sat.value, lum.value)">
+        <div class="form">
+            <label for="hue">色相</label>
+            <input type="range" id="hue" name="hue" value="0" max="360">
+            <output id="hue_value" name="hue_value" for="hue">0</output>
+        </div>
+        <div class="form">
+            <label for="sat">彩度</label>
+            <input type="range" id="sat" name="sat" value="100">
+            <output id="sat_value" name="sat_value" for="sat">100</output>
+        </div>
+        <div class="form">
+            <label for="lum">輝度</label>
+            <input type="range" id="lum" name="lum">
+            <output id="lum_value" name="lum_value" for="lum">50</output>
+        </div>
+    </form>
 </body>
 
 </html>

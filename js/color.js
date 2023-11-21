@@ -36,8 +36,8 @@ class RGB {
     }
 
     set hex(RRGGBB) {
-        this.r = parseInt(RRGGBB.substring(1, 3), 16)
-        this.g = parseInt(RRGGBB.substring(3, 5), 16)
-        this.b = parseInt(RRGGBB.substring(5, 7), 16)
+        this.r = parseInt(RRGGBB.substring(1, 3), 16);
+        this.g = parseInt(RRGGBB.substring(3, 5), 16);
+        this.b = parseInt(RRGGBB.substring(5, 7), 16);
     }
 };
